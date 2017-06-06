@@ -16,15 +16,27 @@
   </md-list-item>
   <md-list-item class="list-header">
     <span class="col-1">
-      <select [(ngModel)]="entry.type">
-        <option value="work">Direct</option>
-        <option value="training">Training</option>
-        <option value="pto">PTO</option>
-      </select>
+      <md-select [(ngModel)]="entry.type">
+        <md-option value="work">Direct</md-option>
+        <md-option value="training">Training</md-option>
+        <md-option value="pto">PTO</md-option>
+      </md-select>
     </span>
-    <span class="col-2"><input type="text" [(ngModel)]="entry.project"></span>
-    <span class="col-3"><input type="text" [(ngModel)]="entry.user"></span>
-    <span class="col-4"><input type="number" [(ngModel)]="entry.hours"></span>
+    <span class="col-2">
+      <md-input-container class="example-full-width">
+        <input mdInput type="text" [(ngModel)]="entry.project">
+      </md-input-container>
+    </span>
+    <span class="col-3">
+      <md-input-container class="example-full-width">
+        <input mdInput type="text" [(ngModel)]="entry.user">
+      </md-input-container>  
+    </span>
+    <span class="col-4">
+      <md-input-container class="example-full-width">
+        <input mdInput type="number" [(ngModel)]="entry.hours">
+      </md-input-container> 
+    </span>
   </md-list-item>
   <button md-raised-button color="accent" (click)="addTimesheetEntry(this.entry)">Add Time</button>
 </md-list>

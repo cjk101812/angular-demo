@@ -25,7 +25,6 @@ export class TimesheetComponent implements OnInit {
   }
 
   addTimesheetEntry(entryDetails): void {  
-    console.log("TEST: " + JSON.stringify(entryDetails)); 
     this.timesheetService.addTimesheetEntry(entryDetails).then(logs => this.logs = logs);
   }
 
