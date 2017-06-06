@@ -1,0 +1,30 @@
+h1, md-list {
+  margin-left: 5%;
+	display: inline-block;
+	md-list-item {
+		width: 100%;
+		border-bottom: 1px solid #d8d8d8;
+		.col-1 {
+			width: 10%;
+		}
+		.col-2 {
+			width: 40%;
+		}
+		.col-3 {
+			width: 40%;
+		}
+		.col-4 {
+			width: 10%;
+		}
+	}
+	md-list-item.list-header {
+		font-weight: bold;
+	}
+}
+md-list {
+	width: 90%;
+	button {
+		margin-top: 5px;
+		float: right;
+	}
+}

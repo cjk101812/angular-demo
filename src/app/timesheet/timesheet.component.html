@@ -1,3 +1,30 @@
-<p>
-  timesheet works!
-</p>
+<h1>Timesheet</h1>
+<md-list>
+  <md-list-item class="list-header">
+    <span class="col-1">Type</span>
+    <span class="col-2">Project</span>
+    <span class="col-3">User</span>
+    <span class="col-4">Hours</span>
+  </md-list-item>
+  <md-list-item *ngFor="let log of logs">
+    <span class="col-1" *ngIf="log.type == 'work'"><i md-icon class="material-icons" mdTooltip="Direct">work</i></span>
+    <span class="col-1" *ngIf="log.type == 'training'"><i md-icon class="material-icons" mdTooltip="Indirect - Training">local_library</i></span>
+    <span class="col-1" *ngIf="log.type == 'pto'"><i md-icon class="material-icons" mdTooltip="Indirect - PTO">weekend</i></span>
+    <span class="col-2">{{log.project}}</span>
+    <span class="col-3">{{log.user}}</span>
+    <span class="col-4">{{log.hours}}</span>
+  </md-list-item>
+  <md-list-item class="list-header">
+    <span class="col-1">
+      <select [(ngModel)]="entry.type">
+        <option value="work">Direct</option>
+        <option value="training">Training</option>
+        <option value="pto">PTO</option>
+      </select>
+    </span>
+    <span class="col-2"><input type="text" [(ngModel)]="entry.project"></span>
+    <span class="col-3"><input type="text" [(ngModel)]="entry.user"></span>
+    <span class="col-4"><input type="number" [(ngModel)]="entry.hours"></span>
+  </md-list-item>
+  <button md-raised-button color="accent" (click)="addTimesheetEntry(this.entry)">Add Time</button>
+</md-list>

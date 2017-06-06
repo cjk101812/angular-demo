@@ -1,0 +1,19 @@
+<div>
+  <md-card class="example-card" *ngFor="let user of users">
+    <md-card-header>
+      <img md-card-avatar src="{{user.imageURL}}" class="example-header-image">
+      <md-card-title>{{user.name}}</md-card-title>
+      <md-card-subtitle>Exp: {{user.experience}} year(s)</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="{{user.imageURL}}">
+    <md-card-content>
+      <p>
+        Team: {{user.team}}
+      </p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button>LIKE</button>
+      <button md-button>SHARE</button>
+    </md-card-actions>
+  </md-card>
+</div>

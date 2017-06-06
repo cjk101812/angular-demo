@@ -7,7 +7,7 @@ export class NavigationService {
 	getTabs(): Promise<Tab[]> {
     return Promise.resolve([
       {name:"Timesheet", link:"timesheet"},
-      {name:"Team", link:""}
+      {name:"Team", link:"team"}
     ]);
   }
 }
