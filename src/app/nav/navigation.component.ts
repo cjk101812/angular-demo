@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MdMenuModule, MdButtonModule } from '@angular/material';
 
 import { NavigationService } from './navigation.service';
 import { Tab } from './tabs';

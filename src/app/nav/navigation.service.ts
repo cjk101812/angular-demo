@@ -6,7 +6,7 @@ import { Tab } from './tabs';
 export class NavigationService {
 	getTabs(): Promise<Tab[]> {
     return Promise.resolve([
-      {name:"Timesheet", link:""},
+      {name:"Timesheet", link:"timesheet"},
       {name:"Team", link:""}
     ]);
   }

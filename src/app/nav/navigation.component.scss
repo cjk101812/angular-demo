@@ -1,18 +1,26 @@
 .navigation-header {
   width: 100%;
-  background-color: #0277BD;
-	padding: 20px 10px;
-	margin-bottom: 10px;
+  background-color: #3F51B5;
+	padding: 17px 10px;
+	display: inline-block;
+	color: #ffffff;
+	i {
+		font-size: 35px;
+		padding: 0px;
+		float: left;
+		margin-right: 10px;
+	}
 	.app-title {
-		font-size: 25px;
 		font-weight: bold;
-		color: #ffffff;
 		margin-right: 30px;
+		font-size: 30px;
+		float: left;
 	}
   .nav-link {
 		color: #ffffff;
-		margin-right: 10px;
+		margin-right: 25px;
 		text-transform: uppercase;
 		text-decoration: none;
+		float: left;
   }
 }

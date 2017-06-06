@@ -1,5 +1,6 @@
-<div class="navigation-header">
+<div md-menu class="navigation-header">
+  <i class="material-icons">schedule</i>
   <span class="app-title">Clockwiser</span>
-  <a *ngFor="let tab of tabs" class="nav-link" href="{{tab.link}}">{{tab.name}}</a>
+  <button md-button *ngFor="let tab of tabs" class="nav-link" routerLink="{{tab.link}}" routerLinkActive="active">{{tab.name}}</button>
 </div>
 
